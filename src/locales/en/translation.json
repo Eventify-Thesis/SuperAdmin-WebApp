@@ -23,8 +23,8 @@
     "manage": "Manage",
     "danger_zone": "Danger Zone",
     "event-dashboard": "Event Dashboard",
-    "export": "Export File",
-    "legal": "Legal Document for Planner",
+    "export": "Category",
+    "legal": "Legal Document",
     "address": "Address",
     "advancedForms": "Advanced Forms",
     "age": "Age",
@@ -177,7 +177,8 @@
     "confirmed": "Confirmed",
     "approved": "Event approved!",
     "declined": "Event declined!",
-    "confirmDecline": "Are you sure you want to decline this event?"
+  "confirmApprove": "Are you sure you want to approve this event?",
+  "confirmDecline": "Are you sure you want to decline this event?"
   },
   "yes": "Yes",
   "no": "No",
@@ -185,11 +186,38 @@
     "approve": "Approve",
     "decline": "Decline"
   },
+  "admin": {
+    "category": {
+      "title": "Manage Categories",
+      "code": "Code",
+      "name_en": "English name",
+      "name_vi": "Vietnamese name",
+      "image": "Image",
+      "upload_image": "Upload Image",
+      "submit": "Create Category",
+      "code_required": "Please enter a category code",
+      "name_en_required": "Please enter the English name",
+      "name_vi_required": "Please enter the Vietnamese name",
+      "image_required": "Please upload an image",
+      "add_success": "Category created successfully!",
+      "add_error": "Failed to create category. Please try again.",
+      "delete_success": "Category deleted successfully!",
+      "delete_error": "Failed to delete category.",
+      "current_categories": "Current Categories"
+    }
+  },
+  "category": {
+    "delete_modal_title": "Hang On a Sec!",
+    "delete_modal_subtitle": "This will permanently delete the category. This action cannot be undone.",
+    "confirm_ok": "Delete it",
+    "confirm_cancel": "Let Me Rethink"
+  },
   "eventDashboard": {
     "title": "Event dashboard",
     "filter": {
       "approved": "Approved",
-      "waitingForApproval": "Waiting approval"
+      "waitingForApproval": "Waiting approval",
+      "cancelled": "Declined"
     },
     "inputs": {
       "searchText": "Search event"

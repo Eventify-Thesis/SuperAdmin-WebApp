@@ -60,6 +60,9 @@ const FilterBar: React.FC<FilterBarProps> = ({
           <S.RadioButton value="PENDING_APPROVAL">
             {t('eventDashboard.filter.waitingForApproval')}
           </S.RadioButton>
+          <S.RadioButton value="CANCELLED">
+            {t('eventDashboard.filter.cancelled')}
+          </S.RadioButton>
         </S.RadioGroup>
       </BaseCol>
     </BaseRow>
@@ -85,17 +88,14 @@ const FilterBar: React.FC<FilterBarProps> = ({
           onChange={handleFilterClick}
           defaultValue={status}
         >
-          <S.RadioButton value="UPCOMING">
-            {t('eventDashboard.filter.upcoming')}
-          </S.RadioButton>
-          <S.RadioButton value="PAST">
-            {t('eventDashboard.filter.past')}
+          <S.RadioButton value="PUBLISHED">
+            {t('eventDashboard.filter.approved')}
           </S.RadioButton>
           <S.RadioButton value="PENDING_APPROVAL">
             {t('eventDashboard.filter.waitingForApproval')}
           </S.RadioButton>
-          <S.RadioButton value="DRAFT">
-            {t('eventDashboard.filter.draft')}
+          <S.RadioButton value="CANCELLED">
+            {t('eventDashboard.filter.cancelled')}
           </S.RadioButton>
         </S.RadioGroup>
       </BaseCol>

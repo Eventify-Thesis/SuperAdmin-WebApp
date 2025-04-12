@@ -1,8 +1,9 @@
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { eventsClient } from '@/api/event.client';
 import { AxiosError } from 'axios';
-import { IdParam } from '@/types/types';
+import { IdParam, PaginationResponse } from '@/types/types';
 import { EventListAllResponse } from '@/dto/event-doc.dto';
+import { EventModel } from '@/domain/EventModel';
 
 export const EVENT_QUERY_KEYS = {
   list: 'eventList',
@@ -19,16 +20,27 @@ interface EventListParams {
   limit?: number;
 }
 
-export const useGetEventList = (params: EventListParams) => {
-  return useQuery<
-    { docs: EventListAllResponse[]; totalDocs: number },
-    AxiosError
-  >({
-    queryKey: [EVENT_QUERY_KEYS.list, params],
-    queryFn: async () => {
-      const data = await eventsClient.getList(params);
-      return data;
-    },
+export const useGetEventList = ({
+  keyword,
+  status,
+  page,
+  limit,
+}: {
+  keyword: string;
+  status: string;
+  page: number;
+  limit: number;
+}) => {
+  return useQuery<PaginationResponse<EventModel>, Error>({
+    queryKey: ['events', keyword, status, page, limit],
+    queryFn: () =>
+      eventsClient.getList({
+        keyword,
+        status,
+        page,
+        limit,
+      }),
+    placeholderData: (previousData) => previousData, // replaces keepPreviousData
   });
 };
 

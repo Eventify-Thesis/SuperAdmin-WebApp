@@ -5,6 +5,7 @@ import { MainHeader } from '../MainHeader/MainHeader';
 import * as S from './MainLayout.styles';
 import { Outlet } from 'react-router-dom';
 import { useAuth } from '@clerk/clerk-react';
+import MainSider from '../sider/MainSider/MainSider';
 
 const MainLayout: React.FC = () => {
   const [siderCollapsed, setSiderCollapsed] = useState(true);
@@ -14,6 +15,10 @@ const MainLayout: React.FC = () => {
 
   return (
     <S.LayoutMaster>
+      <MainSider
+        isCollapsed={siderCollapsed}
+        setCollapsed={setSiderCollapsed}
+      />
       <S.LayoutMain>
         <MainHeader>
           <Header toggleSider={toggleSider} isSiderOpened={!siderCollapsed} />

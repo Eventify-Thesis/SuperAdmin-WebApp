@@ -38,6 +38,29 @@ export const useUpdateEventShow = () => {
   });
 };
 
+export const useUpdateEventStatus = () => {
+  const queryClient = useQueryClient();
+
+  return useMutation({
+    mutationFn: async ({
+      eventId,
+      statusData,
+      currentStatus,
+    }: {
+      eventId: IdParam;
+      statusData: string;
+      currentStatus: string;
+    }) => {
+      return await eventsClient.censorEventStatus(eventId, statusData, currentStatus);
+    },
+    onSuccess: () => {
+      // ✅ Invalidate event list (key should match useGetEventList)
+      queryClient.invalidateQueries({ queryKey: ['events'], exact: false });
+    },
+  });
+};
+
+
 export const useUpdateEventSetting = () => {
   const queryClient = useQueryClient();
 

@@ -57,15 +57,16 @@ export const InputsWrapper = styled.div`
   && {
     .ant-input-search-button:hover {
       opacity: 0.8;
-      color: var(--primary-color);
-      background: ${BASE_COLORS.white};
+      color: ${BASE_COLORS.black};
+      background: var(--primary-color);
     }
   }
 `;
 
 export const RadioGroup = styled(Radio.Group)`
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
+  align-items: flex-start;
   height: auto;
 
   color: ${BASE_COLORS.black};
@@ -98,17 +99,28 @@ export const RadioGroup = styled(Radio.Group)`
 `;
 
 export const RadioButton = styled(Radio.Button)`
-  display: flex;
-  width: auto;
+  flex: 1 1 auto;
   min-width: 8rem;
+  max-width: 100%;
   height: 2.5rem;
+  display: flex;
   align-items: center;
   justify-content: center;
+  white-space: normal;
+  text-align: center;
+  padding: 0 4px;
 
   @media (max-width: 1280px) {
-    flex: 1;
-    min-width: auto;
+    min-width: 6rem;
     height: 2.2rem;
     font-size: 0.9rem;
   }
+
+  @media (max-width: 500px) {
+    font-size: 0.75rem;
+    height: 3rem; /* 👈 Taller button for small screens */
+    line-height: 1.1rem;
+    padding: 0 6px;
+  }
 `;
+
