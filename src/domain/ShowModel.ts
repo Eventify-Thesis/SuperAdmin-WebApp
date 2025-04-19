@@ -4,7 +4,7 @@ import { TicketTypeModel } from './TicketTypeModel';
 
 export interface ShowModel extends BaseModel {
   id?: string;
-  eventId: string;
+  eventId: number;
   name: string;
   description?: string;
   ticketTypes: TicketTypeModel[];

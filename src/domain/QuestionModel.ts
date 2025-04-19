@@ -23,7 +23,7 @@ export interface QuestionModel {
   description?: string;
   sortOrder: number;
   required: boolean;
-  eventId: string;
+  eventId: number;
   belongsTo: QuestionBelongsTo;
   isHidden: boolean;
   ticketTypeIds?: string[];

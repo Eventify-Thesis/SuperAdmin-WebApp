@@ -11,8 +11,8 @@ export const useSeatCategoryMappingQueries = () => {
   const queryClient = useQueryClient();
 
   const useGetByShowId = (
-    eventId: string,
-    showId: string,
+    eventId: number,
+    showId: number,
     enabled: boolean = true,
   ) => {
     return useQuery({
@@ -28,8 +28,8 @@ export const useSeatCategoryMappingQueries = () => {
       showId,
       mappings,
     }: {
-      eventId: string;
-      showId: string;
+      eventId: number;
+      showId: number;
       mappings: any[];
     }) => seatCategoryMappingClient.batchCreate(eventId, showId, { mappings }),
     onSuccess: (_, variables) => {
@@ -53,8 +53,8 @@ export const useSeatCategoryMappingQueries = () => {
       showId,
       mappings,
     }: {
-      eventId: string;
-      showId: string;
+      eventId: number;
+      showId: number;
       mappings: any[];
     }) => seatCategoryMappingClient.batchUpdate(eventId, showId, { mappings }),
     onSuccess: (_, variables) => {
@@ -73,7 +73,7 @@ export const useSeatCategoryMappingQueries = () => {
   });
 
   const deleteByShowIdMutation = useMutation({
-    mutationFn: ({ eventId, showId }: { eventId: string; showId: string }) =>
+    mutationFn: ({ eventId, showId }: { eventId: number; showId: number }) =>
       seatCategoryMappingClient.deleteByShowId(eventId, showId),
     onSuccess: (_, variables) => {
       message.success('Seat category mappings deleted successfully');

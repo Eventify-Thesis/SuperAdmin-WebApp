@@ -5,7 +5,7 @@ export interface MemberModel {
   email: string;
   firstName: string;
   lastName: string;
-  eventId: string;
+  eventId: number;
   role: EventRole;
   createdAt: Date;
   updatedAt: Date;

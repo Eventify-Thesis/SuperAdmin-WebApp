@@ -8,7 +8,7 @@ export interface PaymentInfoModel {
   bankAccountNumber?: string;
   bankOffice?: string;
   businessType?: BusinessType;
-  companyName?: string;
-  companyAddress?: string;
+  name?: string;
+  address?: string;
   taxNumber?: string;
 }

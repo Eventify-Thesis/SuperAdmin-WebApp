@@ -23,7 +23,7 @@ interface ExistingMapping extends MappingFormData {
 }
 
 const EventSeatCategoryMapping: React.FC = () => {
-  const { eventId } = useParams<{ eventId: string }>();
+  const { eventId } = useParams<{ eventId: number }>();
   const [selectedShow, setSelectedShow] = useState<string | null>(null);
   const [selectedSeatingPlan, setSelectedSeatingPlan] = useState<string | null>(
     null,
@@ -95,7 +95,7 @@ const EventSeatCategoryMapping: React.FC = () => {
     }
   }, [categories, existingMappings]);
 
-  const handleShowChange = (showId: string) => {
+  const handleShowChange = (showId: number) => {
     setSelectedShow(showId);
     if (!shows?.find((s) => s.id === showId)?.seatingPlanId) {
       setSelectedSeatingPlan(null);
