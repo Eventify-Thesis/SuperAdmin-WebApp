@@ -142,6 +142,25 @@ export const eventsClient = {
     }
   },
 
+  censorEventStatus: async (
+    eventId: IdParam,
+    status: string,
+    currentStatus: string,
+  ): Promise<EventModel> => {
+    try {
+      const response = await httpApi.put<any>(
+        `/superadmin/events/${eventId}/censor`,
+        {
+          status,
+          currentStatus,
+        },
+      );
+      return response.data.data;
+    } catch (e: any) {
+      throw new Error(e);
+    }
+  },
+
   updateShow: async (eventId: IdParam, showData: any): Promise<any> => {
     try {
       const response = await httpApi.put<any>(

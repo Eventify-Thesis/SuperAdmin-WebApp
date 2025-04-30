@@ -5,6 +5,7 @@ import styled from 'styled-components';
 
 interface EventListProps {
   events: EventListAllResponse[];
+  refetchEvents: () => void;
 }
 const Container = styled.div`
   display: flex;
@@ -15,13 +16,16 @@ const Container = styled.div`
   width: 100%;
 `;
 
-const EventList: React.FC<EventListProps> = ({ events }) => {
+
+const EventList: React.FC<EventListProps> = ({ events, refetchEvents }) => {
   return (
     <Container>
       {!events || events.length === 0 ? (
         <Empty />
       ) : (
-        events.map((event, index) => <EventCard key={index} {...event} />)
+        events.map((event, index) => (
+          <EventCard key={index} {...event} refetchEvents={refetchEvents} />
+        ))
       )}
     </Container>
   );

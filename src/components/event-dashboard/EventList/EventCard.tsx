@@ -7,7 +7,7 @@ import dayjs from 'dayjs';
 import 'dayjs/locale/vi';
 import { useLanguage } from '@/hooks/useLanguage';
 import { EventDetailsModal } from './EventDetailsModal'; // Import the modal
-
+import { useUpdateEventStatus } from '@/mutations/useEventMutations';
 import { useGetEventDetail } from '@/queries/useGetEventDetail';
 import { useListShows } from '@/queries/useShowQueries';
 import { useGetEventSetting } from '@/queries/useGetEventSetting';
@@ -24,6 +24,7 @@ interface EventCardProps {
   status: EventStatus;
   venueName: string;
   role: string;
+  refetchEvents: () => void;
 }
 
 export const EventCard = ({
@@ -36,16 +37,19 @@ export const EventCard = ({
   endTime,
   status,
   venueName,
-  role
+  role,
+  refetchEvents
 }: EventCardProps) => {
   const { language } = useLanguage();
   const locale = language === 'en' ? 'en' : 'vi';
 
+  const updateStatusMutation = useUpdateEventStatus();
   const [modalVisible, setModalVisible] = useState(false);
   
   const { data: eventDetail, isLoading: isEventLoading } = useGetEventDetail(id);
   const { data: showsData, refetch: refetchShows } = useListShows(id);
 
+  console.log(eventDetail);
   // Toggle the visibility of the modal
   const showModal = () => setModalVisible(true);
   const closeModal = () => setModalVisible(false);
@@ -91,7 +95,38 @@ export const EventCard = ({
           </EventInfo>
         </EventDetails>
       </CardContent>
-      <EventCardActions id={id} eventStatus={status} />
+      <EventCardActions
+        id={id}
+        eventStatus={status}
+        onApprove={(id) => {
+          updateStatusMutation.mutate(
+            {
+              eventId: id,
+              statusData: EventStatus.PUBLISHED,
+              currentStatus: status,
+            },
+            {
+              onSuccess: () => {
+                refetchEvents(); // ✅ Refetch after successful approve
+              },
+            }
+          );
+        }}
+        onDecline={(id) => {
+          updateStatusMutation.mutate(
+            {
+              eventId: id,
+              statusData: EventStatus.CANCELLED,
+              currentStatus: status,
+            },
+            {
+              onSuccess: () => {
+                refetchEvents(); // ✅ Refetch after successful decline
+              },
+            }
+          );
+        }}
+      />
       
       {/* Pass the combined event data to the modal */}
       <EventDetailsModal

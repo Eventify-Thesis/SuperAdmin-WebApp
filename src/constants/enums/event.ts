@@ -3,6 +3,7 @@ export enum EventStatus {
   PUBLISHED = 'PUBLISHED',
   UPCOMING = 'UPCOMING',
   PENDING_APPROVAL = 'PENDING_APPROVAL',
+  CANCELLED = 'CANCELLED',
 }
 
 export enum EventType {

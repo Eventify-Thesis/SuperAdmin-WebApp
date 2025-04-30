@@ -1,9 +1,8 @@
 import { useTranslation } from 'react-i18next';
 import styled from 'styled-components';
-
 import { useResponsive } from '@/hooks/useResponsive';
 import { EventStatus } from '@/constants/enums/event';
-import { Button, Popconfirm, message } from 'antd';
+import { Button, Modal, message } from 'antd';
 
 export const EventCardActions = ({
   id,
@@ -16,44 +15,72 @@ export const EventCardActions = ({
   onApprove?: (id: string) => void;
   onDecline?: (id: string) => void;
 }) => {
+  if (![EventStatus.PENDING_APPROVAL].includes(eventStatus)) return null;
+
   const { t } = useTranslation();
   const { isMobile } = useResponsive();
 
-  const handleApprove = () => {
-    if (onApprove) onApprove(id);
-    else message.success(t('eventReview.approved'));
+  const confirmAction = ({
+    title,
+    onConfirm,
+    type,
+  }: {
+    title: string;
+    onConfirm: () => void;
+    type: 'success' | 'error';
+  }) => {
+    Modal.confirm({
+      title,
+      centered: true,
+      okText: t('yes'),
+      cancelText: t('no'),
+      onOk: () => {
+        onConfirm();
+        if (type === 'success') {
+          message.success(t('eventReview.approved'));
+        } else {
+          message.error(t('eventReview.declined'));
+        }
+      },
+    });
   };
-
-  const handleDecline = () => {
-    if (onDecline) onDecline(id);
-    else message.error(t('eventReview.declined'));
-  };
-
-  // Show actions only if event is not yet verified
-  if (eventStatus !== EventStatus.PENDING_APPROVAL) return null;
 
   return (
     <ActionsContainer>
       <ActionItem>
-        <StyledButton type="primary" onClick={handleApprove} isMobile={isMobile}>
-          {<ActionText>{t('eventReview.approve')}</ActionText>}
+        <StyledButton
+          type="primary"
+          onClick={() =>
+            confirmAction({
+              title: t('eventReview.confirmApprove'),
+              onConfirm: () => onApprove?.(id),
+              type: 'success',
+            })
+          }
+          isMobile={isMobile}
+        >
+          <ActionText>{t('eventReview.approve')}</ActionText>
         </StyledButton>
       </ActionItem>
       <ActionItem>
-        <Popconfirm
-          title={t('eventReview.confirmDecline')}
-          onConfirm={handleDecline}
-          okText={t('yes')}
-          cancelText={t('no')}
+        <StyledButton
+          danger
+          onClick={() =>
+            confirmAction({
+              title: t('eventReview.confirmDecline'),
+              onConfirm: () => onDecline?.(id),
+              type: 'error',
+            })
+          }
+          isMobile={isMobile}
         >
-          <StyledButton danger isMobile={isMobile}>
-            {<ActionText>{t('eventReview.decline')}</ActionText>}
-          </StyledButton>
-        </Popconfirm>
+          <ActionText>{t('eventReview.decline')}</ActionText>
+        </StyledButton>
       </ActionItem>
     </ActionsContainer>
   );
 };
+
 interface ActionButtonProps {
   isMobile: boolean;
 }

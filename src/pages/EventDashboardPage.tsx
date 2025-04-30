@@ -20,7 +20,7 @@ const EventDashboardPage: React.FC = () => {
 
   const { t } = useTranslation();
 
-  const { data, isLoading } = useGetEventList({
+  const { data, isLoading, refetch } = useGetEventList({
     keyword,
     status,
     page: currentPage,
@@ -41,7 +41,7 @@ const EventDashboardPage: React.FC = () => {
 
     return (
       <>
-        <EventList events={events} />
+        <EventList events={events} refetchEvents={refetch}/>
         <BaseCol span={12}>
           {events && events.length > 0 && (
             <BasePagination
@@ -75,10 +75,17 @@ const EventDashboardPage: React.FC = () => {
     >
       <FilterBar
         keyword={keyword}
-        setKeyword={setKeyword}
+        setKeyword={(val) => {
+          setKeyword(val);
+          setCurrentPage(1); // reset page
+        }}
         status={status}
-        setStatus={setStatus}
+        setStatus={(val) => {
+          setStatus(val);
+          setCurrentPage(1); // reset page
+        }}
       />
+
       {renderContent()}
     </BaseRow>
   );

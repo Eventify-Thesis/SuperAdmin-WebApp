@@ -11,7 +11,16 @@ interface DesktopHeaderProps {
 
 export const DesktopHeader: React.FC<DesktopHeaderProps> = ({ eventName }) => {
   const leftSide = (
-    <SiderLogo />
+    <h1
+      style={{
+        color: 'white',
+        fontWeight: 'bold',
+        marginLeft: '20px',
+        fontSize: '20px',
+      }}
+    >
+      {eventName || ''}
+    </h1>
   );
 
   return (

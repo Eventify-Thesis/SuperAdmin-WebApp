@@ -17,6 +17,9 @@ import { NotFound } from '../common/NotFound/NotFound';
 const EventDashboardPage = React.lazy(
   () => import('@/pages/EventDashboardPage'),
 );
+const AdminCategoryPage = React.lazy(
+  () => import('@/pages/AdminCategoryPage'),
+)
 
 const EventCreatePage = React.lazy(() => import('@/pages/EventCreatePage'));
 const EventEditPage = React.lazy(() => import('@/pages/EventEditPage'));
@@ -46,7 +49,7 @@ export const AppRouter: React.FC = () => {
             <Route path=":eventId" element={<EventCreatePage />} />
           </Route>
 
-          <Route path="export-file" element={<NotFound />} />
+          <Route path="category" element={<AdminCategoryPage />} />
           <Route path="legal-document" element={<NotFound />} />
         </Route>
 
