@@ -76,6 +76,7 @@ const AdminCategoryPage: React.FC = () => {
           isLoading={isLoading}
           onPreview={handlePreview}
           onDelete={showDeleteConfirm}
+          onReload={refetch}
         />
       </FormWrapper>
     </PageContainer>

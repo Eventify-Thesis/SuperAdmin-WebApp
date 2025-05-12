@@ -1,6 +1,6 @@
 import React from 'react';
 import { List, Button, Spin } from 'antd';
-import { DeleteOutlined } from '@ant-design/icons';
+import { DeleteOutlined, ReloadOutlined } from '@ant-design/icons';
 import { useTranslation } from 'react-i18next';
 import {
   ListWrapper,
@@ -24,6 +24,7 @@ interface Props {
   isLoading: boolean;
   onPreview: (imageUrl: string, title: string) => void;
   onDelete: (category: Category) => void;
+  onReload: () => void;
 }
 
 export const CategoryList: React.FC<Props> = ({
@@ -31,12 +32,24 @@ export const CategoryList: React.FC<Props> = ({
   isLoading,
   onPreview,
   onDelete,
+  onReload,
 }) => {
   const { t } = useTranslation();
 
   return (
     <ListWrapper>
-      <SectionTitle>{t('admin.category.current_categories')}</SectionTitle>
+      <SectionTitle>
+        {t('admin.category.current_categories')}
+        {' '}
+        {!isLoading && (
+          <Button 
+            type="text" 
+            icon={<ReloadOutlined />} 
+            onClick={onReload}
+            style={{ color: 'white', fontSize: '25px', fontWeight: 'bold' }}
+          />
+        )}
+      </SectionTitle>
       {isLoading ? (
         <Spin size="large" />
       ) : (
