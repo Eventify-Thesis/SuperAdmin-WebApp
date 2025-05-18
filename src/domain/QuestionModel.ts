@@ -26,5 +26,5 @@ export interface QuestionModel {
   eventId: number;
   belongsTo: QuestionBelongsTo;
   isHidden: boolean;
-  ticketTypeIds?: string[];
+  ticketTypeIds?: number[];
 }
