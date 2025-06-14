@@ -35,9 +35,6 @@ export const DesktopHeader: React.FC<DesktopHeaderProps> = ({ eventName }) => {
     >
       {leftSide}
       <S.NavRow gutter={[20, 0]} align="middle">
-        <BaseCol>
-          <S.CEButton />
-        </BaseCol>
 
         <BaseCol>
           <UserButton showName={true} appearance={{}} />

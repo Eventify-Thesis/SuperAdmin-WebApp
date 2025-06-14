@@ -188,6 +188,7 @@
   },
   "admin": {
     "category": {
+      "add_category": "Add Category",
       "title": "Manage Categories",
       "code": "Code",
       "name_en": "English name",
