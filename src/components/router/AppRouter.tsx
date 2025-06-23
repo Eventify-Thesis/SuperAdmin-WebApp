@@ -19,10 +19,11 @@ const EventDashboardPage = React.lazy(
 );
 const AdminCategoryPage = React.lazy(
   () => import('@/pages/AdminCategoryPage'),
-)
+);
 
 const EventCreatePage = React.lazy(() => import('@/pages/EventCreatePage'));
 const EventEditPage = React.lazy(() => import('@/pages/EventEditPage'));
+const EventUploadPage = React.lazy(() => import('@/pages/EventUploadPage'));
 
 const AuthLayoutFallback = withLoading(AuthLayout);
 export const HOME_PATH = '/';
@@ -40,7 +41,10 @@ export const AppRouter: React.FC = () => {
         <Route path={HOME_PATH} element={<Navigate to="/events" replace />} />
 
         <Route path={HOME_PATH} element={protectedLayout}>
-          <Route path="events" element={<EventDashboardPage />} />
+          <Route path="events">
+            <Route index element={<EventDashboardPage />} />
+            <Route path="upload" element={<EventUploadPage />} />
+          </Route>
           <Route path="create-event" element={<EventCreatePage />}>
             <Route
               index

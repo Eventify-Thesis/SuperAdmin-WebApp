@@ -20,6 +20,9 @@
     "warningDescription": "This is a warning notice about copywriting."
   },
   "common": {
+    "errors": {
+      "something-went-wrong": "Something went wrong. Please try again later."
+    },
     "manage": "Manage",
     "danger_zone": "Danger Zone",
     "event-dashboard": "Event Dashboard",
@@ -228,6 +231,14 @@
     "orders": "Orders",
     "seating": "Seating",
     "edit": "Edit"
+  },
+  "events": {
+    "upload": {
+      "title": "Event Upload",
+      "button": "Upload Events",
+      "description": "Click the button below to manually trigger the event upload process. This will sync events from the database to the search index.",
+      "success": "Events uploaded successfully!"
+    }
   },
   "event_create": {
     "save": "Save",

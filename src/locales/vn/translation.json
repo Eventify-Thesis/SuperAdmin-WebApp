@@ -112,7 +112,18 @@
     "uncheck": "Uncheck",
     "unchecked": "Unchecked"
   },
+  "events": {
+    "upload": {
+      "title": "Tải lên sự kiện",
+      "button": "Tải lên sự kiện",
+      "description": "Nhấn nút bên dưới để đồng bộ sự kiện từ cơ sở dữ liệu vào chỉ mục tìm kiếm.",
+      "success": "Tải lên sự kiện thành công!"
+    }
+  },
   "common": {
+    "errors": {
+      "something-went-wrong": "Đã xảy ra lỗi. Vui lòng thử lại sau."
+    },
     "address": "Địa chỉ",
     "advancedForms": "Biểu mẫu nâng cao",
     "age": "Tuổi",

@@ -11,9 +11,9 @@ export const FilterContainer = styled.div`
 export const InputsWrapper = styled.div`
   width: 100%;
   max-width: 25rem;
-  height: 3rem;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 8px;
 
   @media (max-width: 1280px) {
@@ -27,7 +27,9 @@ export const InputsWrapper = styled.div`
   }
 
   .ant-input {
-    padding: 6px 11px;
+    padding: 0 11px;
+    height: 2.4rem;
+    line-height: 2.4rem;
     display: flex;
     align-items: center;
   }
@@ -45,8 +47,8 @@ export const InputsWrapper = styled.div`
   }
 
   .ant-input-search-button {
-    height: 2.5rem;
-    padding: 6px 11px;
+    height: 2.4rem;
+    padding: 0 11px;
     color: black;
     background: ${BASE_COLORS.white};
     display: flex;

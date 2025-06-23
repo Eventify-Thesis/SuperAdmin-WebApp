@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { List, Button, Spin } from 'antd';
 import { DeleteOutlined, ReloadOutlined } from '@ant-design/icons';
 import { useTranslation } from 'react-i18next';
@@ -35,6 +35,17 @@ export const CategoryList: React.FC<Props> = ({
   onReload,
 }) => {
   const { t } = useTranslation();
+  const [isReloading, setIsReloading] = useState(false);
+
+  const handleReload = async () => {
+    setIsReloading(true);
+    try {
+      await onReload();
+    } finally {
+      // Keep spinning for at least 500ms to show the animation
+      setTimeout(() => setIsReloading(false), 500);
+    }
+  };
 
   return (
     <ListWrapper>
@@ -44,9 +55,17 @@ export const CategoryList: React.FC<Props> = ({
         {!isLoading && (
           <Button 
             type="text" 
-            icon={<ReloadOutlined />} 
-            onClick={onReload}
-            style={{ color: 'white', fontSize: '25px', fontWeight: 'bold' }}
+            icon={<ReloadOutlined spin={isReloading} style={{ fontSize: '24px' }} />}
+            onClick={handleReload}
+            style={{ 
+              color: 'white', 
+              fontSize: '25px', 
+              fontWeight: 'bold',
+              display: 'inline',
+              alignItems: 'center',
+              justifyContent: 'center'
+            }}
+            disabled={isReloading}
           />
         )}
       </SectionTitle>

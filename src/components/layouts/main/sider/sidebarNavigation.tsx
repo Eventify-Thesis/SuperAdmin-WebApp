@@ -19,6 +19,12 @@ export const sidebarNavigation: SidebarNavigationItem[] = [
     icon: <Icon icon="mdi:event-star" width="24" height="24" />,
   },
   {
+    title: 'events.upload.title',
+    key: 'event-upload',
+    url: '/events/upload',
+    icon: <Icon icon="mdi:upload" width="24" height="24" />,
+  },
+  {
     title: 'common.export',
     key: 'category',
     url: '/category',

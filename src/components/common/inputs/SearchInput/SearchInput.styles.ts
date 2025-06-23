@@ -8,13 +8,27 @@ export const SearchInput = styled(BaseInput.Search)`
     margin: 0.5rem;
   }
 
+  & .ant-input-group .ant-input {
+    height: 1.4rem;
+    line-height: 1.4rem;
+    padding: 0.4rem 1.1rem;
+  }
+
   & .ant-input-search-button {
-    height: 3.54875rem;
+    height: 2.4rem;
+    line-height: 2.4rem;
     box-shadow: none;
   }
 
   &.ant-input-search-large .ant-input-search-button {
-    height: 4.36125rem;
+    height: 2.8rem;
+    line-height: 2.8rem;
+  }
+  
+  &.ant-input-search-large .ant-input {
+    height: 2.8rem;
+    line-height: 2.8rem;
+    padding: 0.4rem 1.1rem;
   }
 
   & input {
@@ -38,6 +52,9 @@ export const SearchInput = styled(BaseInput.Search)`
   }
 
   .ant-input-search-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     &.ant-btn .anticon {
       color: var(--primary-color);
     }
@@ -45,6 +62,7 @@ export const SearchInput = styled(BaseInput.Search)`
     background-color: rgba(1, 80, 154, 0.05);
     border: 1px solid var(--border-color);
     color: var(--primary-color);
+    padding: 0 15px;
   }
 `;
 
