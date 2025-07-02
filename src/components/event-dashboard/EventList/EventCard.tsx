@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import styled from 'styled-components';
 import { EventCardActions } from './EventCardActions';
 import { EventStatus } from '@/constants/enums/event';
@@ -6,12 +6,12 @@ import { Icon } from '@iconify/react/dist/iconify.js';
 import dayjs from 'dayjs';
 import 'dayjs/locale/vi';
 import { useLanguage } from '@/hooks/useLanguage';
-import { EventDetailsModal } from './EventDetailsModal'; // Import the modal
+import { EventDetailsModal } from './EventDetailsModal';
 import { useUpdateEventStatus } from '@/mutations/useEventMutations';
+import { useDeleteEvent } from '@/mutations/useDeleteEvent';
 import { useGetEventDetail } from '@/queries/useGetEventDetail';
 import { useListShows } from '@/queries/useShowQueries';
-import { useGetEventSetting } from '@/queries/useGetEventSetting';
-import { useGetEventPayment } from '@/queries/useGetEventPayment';
+import { Button, message, Popconfirm } from 'antd';
 
 interface EventCardProps {
   id: string;
@@ -34,20 +34,47 @@ export const EventCard = ({
   eventName,
   url,
   startTime,
-  endTime,
   status,
   venueName,
-  role,
   refetchEvents
-}: EventCardProps) => {
+}: Omit<EventCardProps, 'endTime' | 'role'>) => {
   const { language } = useLanguage();
   const locale = language === 'en' ? 'en' : 'vi';
 
   const updateStatusMutation = useUpdateEventStatus();
   const [modalVisible, setModalVisible] = useState(false);
   
-  const { data: eventDetail, isLoading: isEventLoading } = useGetEventDetail(id);
-  const { data: showsData, refetch: refetchShows } = useListShows(id);
+  const { data: eventDetail } = useGetEventDetail(id);
+  const { data: showsData } = useListShows(id);
+  
+  const deleteEventMutation = useDeleteEvent();
+  
+  const handleDelete = async () => {
+    try {
+      await deleteEventMutation.mutateAsync(id);
+      refetchEvents();
+    } catch (error) {
+      // Error is already handled in the mutation's onError
+      console.error('Error in handleDelete:', error);
+    }
+  };
+
+  const handleStatusChange = async (newStatus: string) => {
+    try {
+      if (id) {
+        await updateStatusMutation.mutateAsync({
+          eventId: id,
+          statusData: newStatus,
+          currentStatus: status
+        });
+        message.success(`Event status updated to ${newStatus}`);
+        refetchEvents?.();
+      }
+    } catch (error) {
+      console.error('Error updating event status:', error);
+      message.error('Failed to update event status');
+    }
+  };
 
   console.log(eventDetail);
   // Toggle the visibility of the modal
@@ -95,38 +122,56 @@ export const EventCard = ({
           </EventInfo>
         </EventDetails>
       </CardContent>
-      <EventCardActions
-        id={id}
-        eventStatus={status}
-        onApprove={(id) => {
-          updateStatusMutation.mutate(
-            {
-              eventId: id,
-              statusData: EventStatus.PUBLISHED,
-              currentStatus: status,
-            },
-            {
-              onSuccess: () => {
-                refetchEvents(); // ✅ Refetch after successful approve
+      <ActionsContainer>
+        <EventCardActions
+          id={id}
+          eventStatus={status}
+          onApprove={() => {
+            updateStatusMutation.mutate(
+              {
+                eventId: id,
+                statusData: EventStatus.PUBLISHED,
+                currentStatus: status,
               },
-            }
-          );
-        }}
-        onDecline={(id) => {
-          updateStatusMutation.mutate(
-            {
-              eventId: id,
-              statusData: EventStatus.CANCELLED,
-              currentStatus: status,
-            },
-            {
-              onSuccess: () => {
-                refetchEvents(); // ✅ Refetch after successful decline
+              {
+                onSuccess: () => {
+                  refetchEvents();
+                },
               },
-            }
-          );
-        }}
-      />
+            );
+          }}
+          onDecline={(eventId: string) => {
+            updateStatusMutation.mutate(
+              {
+                eventId,
+                statusData: EventStatus.CANCELLED,
+                currentStatus: status,
+              },
+              {
+                onSuccess: () => {
+                  refetchEvents();
+                },
+              },
+            );
+          }}
+        />
+        <DeleteButtonContainer>
+          <Popconfirm
+            title="Are you sure you want to delete this event?"
+            onConfirm={handleDelete}
+            okText="Yes"
+            cancelText="No"
+            okButtonProps={{ danger: true }}
+          >
+            <Button 
+              type="text" 
+              danger 
+              icon={<Icon icon="mdi:trash-can-outline" width={20} height={20} />} 
+              loading={deleteEventMutation.isLoading}
+            />
+          </Popconfirm>
+        </DeleteButtonContainer>
+      </ActionsContainer>
       
       {/* Pass the combined event data to the modal */}
       <EventDetailsModal
@@ -137,6 +182,18 @@ export const EventCard = ({
     </CardContainer>
   );
 };
+
+const ActionsContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  border-top: 1px solid #515158;
+`;
+
+const DeleteButtonContainer = styled.div`
+  margin-left: auto;
+`;
 
 const CardContainer = styled.article`
   border-radius: 12px;

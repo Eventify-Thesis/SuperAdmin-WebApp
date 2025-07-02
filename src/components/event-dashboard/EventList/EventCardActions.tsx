@@ -89,12 +89,15 @@ const StyledButton = styled(Button)<ActionButtonProps>`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: ${({ isMobile }) => (isMobile ? '2px' : '6px')};
-  width: 100%;
-  padding: 10px 0;
+  gap: 0.25rem;
+  width: ${({ isMobile }) => (isMobile ? '100%' : '120px')};
+  min-width: 100px;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
   font-weight: 500;
-  border-radius: 8px;
-  transition: all 0.2s ease;
+  transition: all 0.2s ease-in-out;
+  white-space: nowrap;
+  flex-shrink: 0;
 
   // APPROVE button (custom green)
   &&.ant-btn-primary {
@@ -129,18 +132,19 @@ const StyledButton = styled(Button)<ActionButtonProps>`
 
 const ActionsContainer = styled.nav`
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  background-color: #414652;
   padding: 10px 20px;
   gap: 1rem;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  width: 100%;
 `;
 
 const ActionItem = styled.div`
   display: flex;
   flex: 1;
   justify-content: center;
+  min-width: 0;
 `;
 
 const ActionText = styled.span`

@@ -116,10 +116,9 @@ export const eventsClient = {
     }
   },
 
-  delete: async (eventId: IdParam): Promise<any> => {
+  delete: async (eventId: IdParam): Promise<void> => {
     try {
-      const response = await httpApi.delete<any>(`/planner/events/${eventId}`);
-      return response.data.data;
+      await httpApi.delete(`/superadmin/events/${eventId}`);
     } catch (e: any) {
       throw new Error(e);
     }
@@ -260,4 +259,6 @@ export const eventsClient = {
       throw new Error(e);
     }
   },
+
+
 };
