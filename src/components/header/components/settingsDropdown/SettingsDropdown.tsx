@@ -16,7 +16,7 @@ export const SettingsDropdown: React.FC = () => {
     >
       <HeaderActionWrapper>
         <BaseButton
-          type={isOpened ? 'ghost' : 'text'}
+          type={isOpened ? 'default' : 'text'}
           icon={
             <SettingOutlined style={{ fontSize: '20px', color: 'white' }} />
           }

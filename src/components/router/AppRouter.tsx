@@ -14,16 +14,16 @@ import RequireAuth from '@/components/router/RequireAuth';
 import { withLoading } from '@/hocs/withLoading.hoc';
 import { SignIn, SignUp } from '@clerk/clerk-react';
 import { NotFound } from '../common/NotFound/NotFound';
+import { ErrorBoundary } from '../common/ErrorBoundary/ErrorBoundary';
 const EventDashboardPage = React.lazy(
   () => import('@/pages/EventDashboardPage'),
 );
-const AdminCategoryPage = React.lazy(
-  () => import('@/pages/AdminCategoryPage'),
-);
+const AdminCategoryPage = React.lazy(() => import('@/pages/AdminCategoryPage'));
 
 const EventCreatePage = React.lazy(() => import('@/pages/EventCreatePage'));
 const EventEditPage = React.lazy(() => import('@/pages/EventEditPage'));
 const EventUploadPage = React.lazy(() => import('@/pages/EventUploadPage'));
+const IssueReportsPage = React.lazy(() => import('@/pages/IssueReportsPage'));
 
 const AuthLayoutFallback = withLoading(AuthLayout);
 export const HOME_PATH = '/';
@@ -54,6 +54,14 @@ export const AppRouter: React.FC = () => {
           </Route>
 
           <Route path="category" element={<AdminCategoryPage />} />
+          <Route
+            path="issue-reports"
+            element={
+              <ErrorBoundary>
+                <IssueReportsPage />
+              </ErrorBoundary>
+            }
+          />
           <Route path="legal-document" element={<NotFound />} />
         </Route>
 

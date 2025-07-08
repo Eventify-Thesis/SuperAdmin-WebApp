@@ -31,6 +31,12 @@ export const sidebarNavigation: SidebarNavigationItem[] = [
     icon: <Icon icon="material-symbols:category" width="24" height="24" />,
   },
   {
+    title: 'Issue Reports',
+    key: 'issue-reports',
+    url: '/issue-reports',
+    icon: <Icon icon="mdi:bug-report" width="24" height="24" />,
+  },
+  {
     title: 'common.legal',
     key: 'legal-document',
     icon: <Icon icon="bx:file" width="24" height="24" />,

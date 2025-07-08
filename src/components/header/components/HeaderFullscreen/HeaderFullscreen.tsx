@@ -16,7 +16,7 @@ export const HeaderFullscreen: React.FC = () => {
       {(isFullscreen) => (
         <HeaderActionWrapper>
           <BaseButton
-            type={isFullscreen ? 'ghost' : 'text'}
+            type={isFullscreen ? 'default' : 'text'}
             icon={
               isFullscreen ? <FullscreenExitOutlined /> : <FullscreenOutlined />
             }
