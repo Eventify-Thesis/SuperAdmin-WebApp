@@ -92,7 +92,7 @@ const EventDashboardPage: React.FC = () => {
 
   return (
     <>
-      <PageTitle>{t('eventDashboardPage.title')}</PageTitle>
+      <PageTitle>{t('eventDashboard.title')}</PageTitle>
       {commonLayout}
     </>
   );

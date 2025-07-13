@@ -1,116 +1,116 @@
 {
   "alerts": {
-    "accept": "Accept",
-    "basic": "Basic alert",
-    "closable": "Closable alert",
-    "customActions": "Alert with custom actions",
-    "decline": "Decline",
-    "detail": "Detail",
-    "done": "Done",
-    "error": "Error text",
-    "errorDescription": "Error Description",
-    "icons": "Alert with icon",
-    "info": "Info text",
-    "infoDescription": "Additional description and information about copywriting.",
-    "success": "Success Text",
-    "successDescription": "Detailed description and advice about successful copywriting.",
-    "types": "Alert types",
-    "undo": "UNDO",
-    "warning": "Warning text",
-    "warningDescription": "This is a warning notice about copywriting."
+    "accept": "Chấp nhận",
+    "basic": "Thông báo cơ bản",
+    "closable": "Thông báo có thể đóng",
+    "customActions": "Thông báo với hành động tùy chỉnh",
+    "decline": "Từ chối",
+    "detail": "Chi tiết",
+    "done": "Hoàn thành",
+    "error": "Lỗi",
+    "errorDescription": "Mô tả lỗi",
+    "icons": "Thông báo có biểu tượng",
+    "info": "Thông tin",
+    "infoDescription": "Mô tả và thông tin bổ sung về nội dung.",
+    "success": "Thành công",
+    "successDescription": "Mô tả chi tiết và lời khuyên về nội dung thành công.",
+    "types": "Các loại thông báo",
+    "undo": "HOÀN TÁC",
+    "warning": "Cảnh báo",
+    "warningDescription": "Đây là thông báo cảnh báo về nội dung."
   },
   "auth": {
-    "signUpSuccessDescription": "Please use your new credentials to log in",
-    "signUpSuccessMessage": "New user was created"
+    "signUpSuccessDescription": "Vui lòng sử dụng thông tin đăng nhập mới của bạn",
+    "signUpSuccessMessage": "Đã tạo người dùng mới thành công"
   },
   "autoCompletes": {
     "antDesign": "AntDesign",
-    "antDesignFaq": "AntDesign FAQ",
-    "antDesignLanguage": "AntDesign design language",
-    "antDesignUI": "AntDesign UI",
-    "antDesignUIFaq": "AntDesign UI FAQ",
-    "articles": "Articles",
-    "basic": "Basic AutoComplete",
-    "categories": "AutoComplete with categories",
-    "customOptions": "AutoComplete with custom options",
-    "inputHere": "input here",
-    "libraries": "Libraries",
-    "solutions": "Solutions"
+    "antDesignFaq": "Câu hỏi thường gặp về AntDesign",
+    "antDesignLanguage": "Ngôn ngữ thiết kế AntDesign",
+    "antDesignUI": "Giao diện AntDesign",
+    "antDesignUIFaq": "Câu hỏi thường gặp về giao diện AntDesign",
+    "articles": "Bài viết",
+    "basic": "Tự động hoàn thành cơ bản",
+    "categories": "Tự động hoàn thành theo danh mục",
+    "customOptions": "Tự động hoàn thành với tùy chọn tùy chỉnh",
+    "inputHere": "nhập tại đây",
+    "libraries": "Thư viện",
+    "solutions": "Giải pháp"
   },
   "breadcrumbs": {
     "antd": "Ant Design",
-    "application": "An Application",
-    "applicationCenter": "Application Center",
-    "applicationList": "Application List",
-    "basic": "Basic breadcrumb",
-    "button": "Button",
-    "component": "Component",
-    "customSeparator": "Breadcrumb with custom separator",
-    "general": "General",
-    "home": "Home",
-    "layout": "Layout",
-    "navigation": "Navigation",
-    "withDropdown": "Breadcrumb with dropdown",
-    "withIcon": "Breadcrumb with icon"
+    "application": "Một Ứng dụng",
+    "applicationCenter": "Trung tâm Ứng dụng",
+    "applicationList": "Danh sách Ứng dụng",
+    "basic": "Thanh điều hướng cơ bản",
+    "button": "Nút bấm",
+    "component": "Thành phần",
+    "customSeparator": "Thanh điều hướng với dấu phân cách tùy chỉnh",
+    "general": "Chung",
+    "home": "Trang chủ",
+    "layout": "Bố cục",
+    "navigation": "Điều hướng",
+    "withDropdown": "Thanh điều hướng có menu thả xuống",
+    "withIcon": "Thanh điều hướng có biểu tượng"
   },
   "buttons": {
-    "click": "Click me!",
-    "danger": "Danger buttons",
-    "dashed": "Dashed",
-    "default": "Default",
-    "disabled": "Disabled buttons",
-    "ghost": "Ghost",
-    "icons": "Icons buttons",
-    "large": "Large",
-    "link": "Link",
-    "loading": "Loading",
-    "loadings": "Loading buttons",
-    "primary": "Primary",
-    "search": "Search",
-    "severities": "Button severities",
-    "sizes": "Button sizes",
-    "small": "Small",
-    "text": "Text",
-    "types": "Button types"
+    "click": "Nhấn vào tôi!",
+    "danger": "Nút nguy hiểm",
+    "dashed": "Đường đứt nét",
+    "default": "Mặc định",
+    "disabled": "Nút vô hiệu hóa",
+    "ghost": "Trong suốt",
+    "icons": "Nút có biểu tượng",
+    "large": "Lớn",
+    "link": "Liên kết",
+    "loading": "Đang tải",
+    "loadings": "Nút tải",
+    "primary": "Chính",
+    "search": "Tìm kiếm",
+    "severities": "Mức độ nghiêm trọng của nút",
+    "sizes": "Kích thước nút",
+    "small": "Nhỏ",
+    "text": "Văn bản",
+    "types": "Các loại nút"
   },
   "charts": {
-    "averageValue": "Average Value",
-    "barLabel": "Bar Animation Delay",
-    "coal": "Coal",
-    "direct": "Direct",
-    "females": "Females",
-    "gas": "Gas",
-    "gradientLabel": "Gradient Stacked Area",
-    "hydro": "Hydro",
-    "incomeOf": "Income of Germany and France since 1950",
-    "lineRace": "Line Race",
-    "males": "Males",
-    "nuclear": "Nuclear",
-    "oil": "Oil",
-    "pie": "Pie",
-    "scatter": "Scatter",
-    "search": "Search Engine",
-    "union": "Union Ads",
-    "video": "Video Ads",
-    "visitorsFrom": "Visitors from"
+    "averageValue": "Giá trị trung bình",
+    "barLabel": "Độ trễ hiệu ứng thanh",
+    "coal": "Than đá",
+    "direct": "Trực tiếp",
+    "females": "Nữ",
+    "gas": "Khí đốt",
+    "gradientLabel": "Vùng xếp chồng gradient",
+    "hydro": "Thủy điện",
+    "incomeOf": "Thu nhập của Đức và Pháp từ năm 1950",
+    "lineRace": "Đường đua",
+    "males": "Nam",
+    "nuclear": "Hạt nhân",
+    "oil": "Dầu mỏ",
+    "pie": "Hình tròn",
+    "scatter": "Phân tán",
+    "search": "Công cụ tìm kiếm",
+    "union": "Quảng cáo liên kết",
+    "video": "Quảng cáo video",
+    "visitorsFrom": "Lượt truy cập từ"
   },
   "checkboxes": {
-    "apple": "Apple",
-    "basic": "Basic checkbox",
-    "check": "Check",
-    "checkbox": "Checkbox",
-    "checked": "Checked",
-    "controlled": "Controlled checkbox",
-    "disable": "Disable",
-    "disabled": "Disabled",
-    "disabledCheckbox": "Disabled checkbox",
-    "enable": "Enable",
-    "enabled": "Enabled",
-    "group": "Checkbox group",
-    "orange": "Orange",
-    "pear": "Pear",
-    "uncheck": "Uncheck",
-    "unchecked": "Unchecked"
+    "apple": "Táo",
+    "basic": "Ô chọn cơ bản",
+    "check": "Chọn",
+    "checkbox": "Ô chọn",
+    "checked": "Đã chọn",
+    "controlled": "Ô chọn được kiểm soát",
+    "disable": "Tắt",
+    "disabled": "Đã tắt",
+    "disabledCheckbox": "Ô chọn bị vô hiệu hóa",
+    "enable": "Bật",
+    "enabled": "Đã bật",
+    "group": "Nhóm ô chọn",
+    "orange": "Cam",
+    "pear": "Lê",
+    "uncheck": "Bỏ chọn",
+    "unchecked": "Chưa chọn"
   },
   "events": {
     "upload": {
@@ -124,6 +124,12 @@
     "errors": {
       "something-went-wrong": "Đã xảy ra lỗi. Vui lòng thử lại sau."
     },
+    "manage": "Quản lý",
+    "danger_zone": "Khu vực nguy hiểm",
+    "event-dashboard": "Bảng điều khiển sự kiện",
+    "export": "Danh mục",
+    "legal": "Tài liệu pháp lý",
+    "issueReports": "Báo cáo sự cố",
     "address": "Địa chỉ",
     "advancedForms": "Biểu mẫu nâng cao",
     "age": "Tuổi",
@@ -141,17 +147,20 @@
     "calendar": "Lịch",
     "cancel": "Hủy",
     "change": "Thay đổi",
+    "cardiologist": "Bác sĩ tim mạch",
+    "charts": "Biểu đồ",
+    "checkbox": "Ô chọn",
     "city": "Thành phố",
     "clientError": "Lỗi máy khách",
     "collapse": "Thu gọn",
     "confirm": "Xác nhận",
     "confirmPassword": "Xác nhận mật khẩu",
-    "confirmPasswordError": "The two passwords that you entered do not match!",
+    "confirmPasswordError": "Hai mật khẩu bạn nhập không khớp!",
     "copied": "Đã sao chép",
     "copy": "Sao chép",
     "country": "Quốc gia",
-    "nft-dashboard": "NFT Dashboard",
-    "medical-dashboard": "Medical Dashboard",
+    "nft-dashboard": "Bảng điều khiển NFT",
+    "medical-dashboard": "Bảng điều khiển Y tế",
     "dataDisplay": "Hiển thị dữ liệu",
     "dataTables": "Bảng dữ liệu",
     "dateTime": "Ngày và giờ",
@@ -163,17 +172,17 @@
     "dropdown": "Thả xuống",
     "edit": "Chỉnh sửa",
     "email": "Email",
-    "emailError": "Please input users name or delete this field",
-    "notValidEmail": "Please input a valid email address!",
+    "emailError": "Vui lòng nhập tên người dùng hoặc xóa trường này",
+    "notValidEmail": "Vui lòng nhập địa chỉ email hợp lệ!",
     "error": "Lỗi",
-    "feed": "Cấp dữ liệu",
+    "feed": "Nguồn cấp dữ liệu",
     "firstName": "Tên",
     "forgotPass": "Quên mật khẩu",
     "forgotPasswordPage": "Trang quên mật khẩu",
-    "formError": "An error has occured",
+    "formError": "Đã xảy ra lỗi",
     "forms": "Biểu mẫu",
     "googleMap": "Bản đồ Google",
-    "here": "ở đây",
+    "here": "tại đây",
     "info": "Thông tin",
     "input": "Nhập",
     "inputCode": "Nhập mã",
@@ -196,7 +205,7 @@
     "notification": "Thông báo",
     "ok": "Đồng ý",
     "oncologist": "Bác sĩ ung thư",
-    "oops": "Oops!",
+    "oops": "Rất tiếc!",
     "openInNewTab": "Mở trong tab mới",
     "ophthalmologist": "Bác sĩ mắt",
     "pages": "Trang",
@@ -241,84 +250,96 @@
     "verifyEmailPage": "Trang xác minh email",
     "warning": "Cảnh báo",
     "zipcode": "Mã bưu điện",
-    "delete": "Xóa"
+    "delete": "Xóa",
+    "working": "Đang xử lý..."
   },
   "medical-dashboard": {
     "activity": {
-      "kcalBurned": "kcal burned on",
-      "title": "Activity"
+      "kcalBurned": "kcal đã đốt cháy vào",
+      "title": "Hoạt động"
     },
     "bloodScreening": {
-      "flag": "Flag",
-      "high": "HIGH",
-      "low": "LOW",
-      "norm": "NORM",
-      "result": "Result",
-      "test": "Test",
-      "title": "Blood screening",
-      "units": "Units"
+      "flag": "Cờ",
+      "high": "CAO",
+      "low": "THẤP",
+      "norm": "BÌNH THƯỜNG",
+      "result": "Kết quả",
+      "test": "Xét nghiệm",
+      "title": "Sàng lọc máu",
+      "units": "Đơn vị"
     },
-    "bones": "Bones",
+    "bones": "Xương",
     "covid": {
-      "casesPerDay": "cases/day",
-      "deaths": "deaths",
-      "title": "Real COVID-19 Statistics"
+      "casesPerDay": "ca/ngày",
+      "deaths": "tử vong",
+      "title": "Thống kê COVID-19 thời gian thực"
     },
-    "fat": "Fat",
+    "fat": "Mỡ",
     "favoriteDoctors": {
-      "lastVisit": "Last visit",
-      "title": "Favorite doctors"
+      "lastVisit": "Lần khám cuối",
+      "title": "Bác sĩ yêu thích"
     },
     "health": {
       "ecology": {
-        "description": "The environment is a major determinant of health, estimated to account for almost 20% of all deaths in the WHO European Region.",
-        "title": "Ecology"
+        "description": "Môi trường là yếu tố quyết định chính đối với sức khỏe, ước tính chiếm gần 20% tổng số ca tử vong ở Khu vực Châu Âu của WHO.",
+        "title": "Sinh thái"
       },
       "genetics": {
-        "description": "Multivariate studies show that genetic factors enhancing SWB are partly overlapping with those protecting against depression and other mental health problems.",
-        "title": "Genetics"
+        "description": "Các nghiên cứu đa biến cho thấy các yếu tố di truyền nâng cao SWB phần nào trùng lặp với các yếu tố bảo vệ chống lại trầm cảm và các vấn đề sức khỏe tâm thần khác.",
+        "title": "Di truyền"
       },
       "lifestyle": {
-        "description": "According to WHO, 60% of related factors to individual health and quality of life are correlated to lifestyle.",
-        "title": "Lifestyle"
+        "description": "Theo WHO, 60% các yếu tố liên quan đến sức khỏe cá nhân và chất lượng cuộc sống có tương quan với lối sống.",
+        "title": "Lối sống"
       },
       "medicine": {
-        "description": "Relationship between health insurance (or lack of insurance), use of medical care and health outcomes for specific conditions and types of services, and with overall health status and mortality.",
-        "title": "Medicine"
+        "description": "Mối quan hệ giữa bảo hiểm y tế (hoặc thiếu bảo hiểm), việc sử dụng dịch vụ chăm sóc y tế và kết quả sức khỏe đối với các tình trạng cụ thể và các loại dịch vụ, cũng như tình trạng sức khỏe tổng thể và tỷ lệ tử vong.",
+        "title": "Y học"
       },
-      "title": "Health"
+      "title": "Sức khỏe"
     },
     "latestScreenings": {
-      "friends": "Friends",
-      "month": "Month",
-      "statistics": "Statistics",
-      "title": "Latest screenings"
+      "friends": "Bạn bè",
+      "month": "Tháng",
+      "statistics": "Thống kê",
+      "title": "Lần sàng lọc gần đây"
     },
     "map": {
-      "polyclinic": "Polyclinic"
+      "polyclinic": "Phòng khám đa khoa"
     },
-    "news": "News",
+    "news": "Tin tức",
     "patientResults": {
       "patientAdmission": {
-        "description": "Admission of a patient means allowing and facilitating a patient to stay in the hospital unit or ward for observation, investigation, and treatment of the disease he or she is suffering from.",
-        "title": "Patient admission"
+        "description": "Tiếp nhận bệnh nhân có nghĩa là cho phép và tạo điều kiện để bệnh nhân ở lại đơn vị hoặc phòng bệnh viện để theo dõi, khám và điều trị bệnh mà họ đang mắc phải.",
+        "title": "Tiếp nhận bệnh nhân"
       },
-      "patientDischarge": {
-        "description": "A hospital will discharge you when you no longer need to receive inpatient care and can go home. Or, a hospital will discharge you to send you to another type of facility.",
-        "title": "Patient's discharge"
+      "patientWithCovid": {
+        "description": "Bệnh nhân mắc COVID-19 được định nghĩa là người có xác nhận nhiễm COVID-19 bằng xét nghiệm trong phòng thí nghiệm, bất kể có biểu hiện lâm sàng hay triệu chứng nào hay không.",
+        "title": "Bệnh nhân mắc COVID-19"
       },
-      "title": "Patient timeline",
-      "treatmentStarts": {
-        "description": "Part of the evaluation and treatment of any patient, regardless of condition or diagnosis, is an appropriate framework or pathway for diagnosis, treatment, and, if necessary, referral for specialty care.",
-        "title": "Treatment starts"
-      }
+      "title": "Kết quả bệnh nhân"
     },
-    "protein": "Protein",
+    "statistics": {
+      "description": "Thống kê là một bộ môn khoa học toán học liên quan đến việc thu thập, phân tích, diễn giải hoặc giải thích và trình bày dữ liệu, hoặc như một nhánh của toán học.",
+      "title": "Thống kê"
+    },
+    "title": "Bảng điều khiển Y tế",
     "treatmentPlan": {
       "noVisits": "No visits for that day",
       "title": "Treatment plan"
     },
-    "water": "Water"
+    "protein": "Protein",
+    "treatments": {
+      "antibiotic": "Kháng sinh",
+      "corticosteroid": "Corticosteroid",
+      "title": "Phương pháp điều trị"
+    },
+    "upcomingEvents": {
+      "title": "Sự kiện sắp tới"
+    },
+    "water": "Water",
+    "waterLevel": "Mực nước",
+    "weight": "Cân nặng"
   },
   "dataDisplay": {
     "avatars": {
@@ -502,6 +523,15 @@
       "viewAll": "View all"
     },
     "search": "Search"
+  },
+  "eventReview": {
+    "approve": "Phê duyệt",
+    "decline": "Từ chối",
+    "confirmed": "Đã xác nhận",
+    "approved": "Sự kiện đã được phê duyệt!",
+    "declined": "Sự kiện đã bị từ chối!",
+    "confirmApprove": "Bạn có chắc chắn muốn phê duyệt sự kiện này không?",
+    "confirmDecline": "Bạn có chắc chắn muốn từ chối sự kiện này không?"
   },
   "inputs": {
     "basic": "Basic input",
@@ -915,6 +945,214 @@
     "hide_question": "Ẩn câu hỏi này",
     "hide_question_desc": "Các câu hỏi bị ẩn chỉ hiển thị với người tổ chức sự kiện và không hiển thị với khách hàng."
   },
+  "eventDashboard": {
+    "title": "Bảng điều khiển sự kiện",
+    "filter": {
+      "approved": "Đã phê duyệt",
+      "waitingForApproval": "Đang chờ phê duyệt",
+      "cancelled": "Đã từ chối"
+    },
+    "inputs": {
+      "searchText": "Tìm kiếm sự kiện"
+    },
+    "overview": "Tổng quan",
+    "members": "Thành viên",
+    "orders": "Đơn hàng",
+    "seating": "Sắp xếp chỗ ngồi",
+    "edit": "Chỉnh sửa"
+  },
+  "event_create": {
+    "save": "Lưu",
+    "continue": "Tiếp tục",
+    "previous_step_required": "Vui lòng hoàn thành bước hiện tại trước khi tiếp tục",
+    "next_step_required": "Vui lòng hoàn thành bước trước đó trước khi tiếp tục",
+    "failed_to_save": "Lưu sự kiện thất bại",
+    "failed_to_load": "Tải sự kiện thất bại",
+    "event_info_saved_successfully": "Lưu thông tin sự kiện thành công!",
+    "event_info_updated_successfully": "Cập nhật thông tin sự kiện thành công!",
+    "event_show_updated_successfully": "Cập nhật lịch chiếu thành công!",
+    "invalid_settings_data": "Dữ liệu cài đặt không hợp lệ",
+    "fill_required_fields": "Vui lòng điền đầy đủ các trường bắt buộc",
+    "failed_to_save_event_payment": "Lưu thông tin thanh toán thất bại",
+    "failed_to_load_payment": "Tải thông tin thanh toán thất bại",
+    "at_least_one_show_required": "Vui lòng tạo ít nhất một lịch chiếu",
+    "at_least_one_ticket_type": "Vui lòng tạo ít nhất một loại vé",
+    "event_identity": {
+      "title": "Thông tin sự kiện",
+      "logo": "Logo sự kiện",
+      "logo_required": "Vui lòng tải lên logo sự kiện",
+      "banner": "Banner sự kiện",
+      "banner_required": "Vui lòng tải lên banner sự kiện",
+      "name": "Tên sự kiện",
+      "name_required": "Vui lòng nhập tên sự kiện"
+    },
+    "upload": {
+      "logo": "Tải lên Logo",
+      "banner": "Tải lên Banner",
+      "organizer_logo": "Tải lên Logo nhà tổ chức"
+    },
+    "event_location": {
+      "title": "Địa điểm tổ chức",
+      "type": "Loại sự kiện",
+      "type_required": "Vui lòng chọn loại sự kiện",
+      "offline": "Sự kiện offline",
+      "online": "Sự kiện trực tuyến",
+      "venue_name": "Tên địa điểm",
+      "venue_name_required": "Vui lòng nhập tên địa điểm",
+      "city": "Tỉnh/Thành phố",
+      "district": "Quận/Huyện",
+      "ward": "Phường/Xã",
+      "city_placeholder": "Chọn tỉnh/thành phố",
+      "city_required": "Vui lòng chọn tỉnh/thành phố",
+      "district_placeholder": "Chọn quận/huyện",
+      "district_required": "Vui lòng chọn quận/huyện",
+      "ward_placeholder": "Chọn phường/xã",
+      "ward_required": "Vui lòng chọn phường/xã",
+      "street_address": "Địa chỉ đường phố",
+      "street_address_placeholder": "Nhập địa chỉ đường phố",
+      "street_address_required": "Vui lòng nhập địa chỉ đường phố",
+      "street_required": "Vui lòng nhập địa chỉ đường phố"
+    },
+    "event_category": {
+      "title": "Danh mục sự kiện",
+      "label": "Danh mục",
+      "required": "Vui lòng chọn danh mục",
+      "placeholder": "Chọn danh mục",
+      "info": "Thông tin danh mục sự kiện",
+      "info_required": "Vui lòng nhập thông tin danh mục sự kiện"
+    },
+    "event_description": {
+      "title": "Mô tả sự kiện",
+      "label": "Thông tin sự kiện",
+      "required": "Vui lòng nhập mô tả sự kiện"
+    },
+    "organizer_information": {
+      "title": "Thông tin nhà tổ chức",
+      "logo": "Logo nhà tổ chức",
+      "logo_required": "Vui lòng tải lên logo nhà tổ chức",
+      "name": "Tên nhà tổ chức",
+      "name_required": "Vui lòng nhập tên nhà tổ chức",
+      "information": "Thông tin nhà tổ chức",
+      "info_required": "Vui lòng nhập thông tin nhà tổ chức"
+    }
+  },
+  "event_settings": {
+    "basic_settings": "Cài đặt cơ bản",
+    "max_attendees": "Số người tham dự tối đa",
+    "max_attendees_required": "Vui lòng nhập số người tham dự tối đa",
+    "age_restriction": "Giới hạn độ tuổi",
+    "age_restriction_required": "Vui lòng chọn giới hạn độ tuổi",
+    "select_age_restriction": "Chọn giới hạn độ tuổi",
+    "all_ages": "Mọi lứa tuổi",
+    "eighteen_plus": "18+",
+    "twenty_one_plus": "21+",
+    "your_event_link_will_be": "Liên kết sự kiện của bạn sẽ là",
+    "event_url": "URL sự kiện",
+    "custom_url": "URL tùy chỉnh",
+    "custom_url_required": "Vui lòng nhập URL tùy chỉnh",
+    "custom_url_invalid": "URL chỉ được chứa chữ cái, số và dấu gạch ngang",
+    "custom_url_placeholder": "ten-su-kien-cua-ban",
+    "event_link": "Liên kết sự kiện",
+    "event_privacy": "Riêng tư sự kiện",
+    "privacy_required": "Vui lòng chọn chế độ riêng tư cho sự kiện",
+    "public_event": "Sự kiện công khai",
+    "public_event_desc": "Bất kỳ ai cũng có thể tìm thấy và xem sự kiện này",
+    "private_event": "Sự kiện riêng tư",
+    "private_event_desc": "Chỉ những người có liên kết trực tiếp mới có thể xem sự kiện này",
+    "attendee_message": "Tin nhắn cho người tham dự",
+    "confirmation_message": "Tin nhắn xác nhận",
+    "message_required": "Vui lòng nhập tin nhắn cho người tham dự",
+    "message_placeholder": "Viết tin nhắn sẽ được gửi kèm theo xác nhận đặt vé cho người tham dự",
+    "message_help": "Tin nhắn này sẽ được đính kèm trong email xác nhận đặt vé gửi đến người tham dự"
+  },
+  "members": {
+    "errors": {
+      "alreadyExists": "Thành viên này đã tồn tại trong tổ chức",
+      "notFound": "Không tìm thấy người dùng",
+      "cannotAssignRole": "Bạn không có quyền gán vai trò này",
+      "cannotDeleteMember": "Bạn không có quyền xóa thành viên này",
+      "cannotManageRole": "Bạn không có quyền quản lý vai trò này",
+      "notOrganizationMember": "Bạn không phải là thành viên của tổ chức này",
+      "clerkError": "Đã xảy ra lỗi khi quản lý thành viên tổ chức"
+    },
+    "role": {
+      "ADMIN": "Quản trị viên",
+      "ENTRY_STAFF": "Nhân viên kiểm soát vé",
+      "MANAGER": "Quản lý",
+      "MEMBER": "Thành viên",
+      "OWNER": "Chủ sở hữu",
+      "VENDOR": "Nhà cung cấp"
+    },
+    "table": {
+      "member": "Thành viên",
+      "role": "Vai trò",
+      "actions": "Hành động"
+    },
+    "search": {
+      "placeholder": "Tìm kiếm thành viên..."
+    },
+    "viewPermissions": "Xem quyền hạn",
+    "addMember": "Thêm thành viên",
+    "modal": {
+      "editTitle": "Chỉnh sửa vai trò thành viên",
+      "addTitle": "Thêm thành viên mới"
+    },
+    "form": {
+      "email": "Email",
+      "emailRequired": "Vui lòng nhập email thành viên!",
+      "emailInvalid": "Vui lòng nhập địa chỉ email hợp lệ!",
+      "role": "Vai trò",
+      "roleRequired": "Vui lòng chọn vai trò!"
+    },
+    "permissions": {
+      "title": "Quyền hạn theo vai trò",
+      "permission": "Quyền hạn",
+      "role": "Vai trò"
+    },
+    "list": {
+      "error": "Không thể tải danh sách thành viên"
+    },
+    "add": {
+      "success": "Đã thêm thành viên thành công",
+      "error": "Thêm thành viên thất bại"
+    },
+    "update": {
+      "success": "Đã cập nhật vai trò thành viên thành công",
+      "error": "Cập nhật vai trò thất bại"
+    },
+    "delete": {
+      "success": "Đã xóa thành viên thành công",
+      "error": "Xóa thành viên thất bại"
+    }
+  },
+  "permissions": {
+    "org:event:analytic": "Bảng điều khiển phân tích sự kiện",
+    "org:event:entry": "Checkin/Checkout sự kiện",
+    "org:event:marketing": "Tiếp thị sự kiện",
+    "org:event:member": "Thành viên sự kiện",
+    "org:event:order": "Đơn đặt vé sự kiện",
+    "org:event:seatmap": "Sơ đồ chỗ ngồi",
+    "org:event:setting": "Cài đặt sự kiện",
+    "org:event:voucher": "Mã giảm giá sự kiện"
+  },
+  "roles": {
+    "org:admin": "Quản trị viên",
+    "org:staff": "Nhân viên kiểm soát vé",
+    "org:manager": "Quản lý",
+    "org:member": "Thành viên",
+    "org:owner": "Chủ sở hữu",
+    "org:vendor": "Nhà cung cấp"
+  },
+  "event": {
+    "analytic": "Phân tích",
+    "entry": "Quản lý vào cửa",
+    "marketing": "Tiếp thị",
+    "member": "Quản lý thành viên",
+    "order": "Quản lý đơn hàng",
+    "seatmap": "Sơ đồ chỗ ngồi",
+    "setting": "Cài đặt",
+    "voucher": "Quản lý mã giảm giá"
+  },
   "voucher": {
     "name": "Tên",
     "name_placeholder": "Nhập tên mã giảm giá",
@@ -926,13 +1164,56 @@
     "expires_this_week": "Hết hạn trong tuần này",
     "active": "Còn hiệu lực",
     "no_expiry": "Không giới hạn",
+    "discount_type": "Loại giảm giá",
+    "discount_type_percent": "Phần trăm",
+    "discount_type_fixed": "Số tiền cố định",
+    "discount_value": "Giá trị giảm giá",
+    "discount_value_placeholder": "Nhập giá trị giảm giá",
+    "min_order_value": "Giá trị đơn hàng tối thiểu",
+    "min_order_value_placeholder": "Nhập giá trị tối thiểu",
+    "max_discount_amount": "Giảm giá tối đa",
+    "max_discount_amount_placeholder": "Nhập số tiền giảm tối đa",
+    "usage_limit": "Giới hạn sử dụng",
+    "usage_limit_placeholder": "Số lần sử dụng tối đa",
+    "usage_limit_per_user": "Giới hạn sử dụng/người",
+    "usage_limit_per_user_placeholder": "Số lần sử dụng tối đa mỗi người",
+    "start_date": "Ngày bắt đầu",
+    "end_date": "Ngày kết thúc",
+    "no_end_date": "Không có ngày kết thúc",
     "status": {
+      "active": "Đang hoạt động",
+      "inactive": "Không hoạt động",
       "change": {
-        "confirm": "Bạn có chắc chắn muốn thay đổi trạng thái của mã giảm giá này?"
+        "confirm": "Bạn có chắc chắn muốn thay đổi trạng thái của mã giảm giá này?",
+        "success": "Đã cập nhật trạng thái thành công",
+        "error": "Cập nhật trạng thái thất bại"
       }
     },
+    "create": {
+      "title": "Tạo mã giảm giá mới",
+      "success": "Tạo mã giảm giá thành công",
+      "error": "Tạo mã giảm giá thất bại"
+    },
+    "update": {
+      "title": "Cập nhật mã giảm giá",
+      "success": "Cập nhật mã giảm giá thành công",
+      "error": "Cập nhật mã giảm giá thất bại"
+    },
     "delete": {
-      "confirm": "Bạn có chắc chắn muốn xóa mã giảm giá này?"
+      "confirm": "Bạn có chắc chắn muốn xóa mã giảm giá này?",
+      "success": "Đã xóa mã giảm giá thành công",
+      "error": "Xóa mã giảm giá thất bại"
+    },
+    "validation": {
+      "name_required": "Vui lòng nhập tên mã giảm giá",
+      "discount_code_required": "Vui lòng nhập mã giảm giá",
+      "discount_value_required": "Vui lòng nhập giá trị giảm giá",
+      "discount_value_min": "Giá trị giảm giá phải lớn hơn 0",
+      "min_order_value_min": "Giá trị đơn hàng tối thiểu phải lớn hơn 0",
+      "start_date_required": "Vui lòng chọn ngày bắt đầu",
+      "end_date_after_start": "Ngày kết thúc phải sau ngày bắt đầu",
+      "usage_limit_min": "Giới hạn sử dụng phải lớn hơn 0",
+      "usage_limit_per_user_min": "Giới hạn sử dụng mỗi người phải lớn hơn 0"
     }
   }
 }
