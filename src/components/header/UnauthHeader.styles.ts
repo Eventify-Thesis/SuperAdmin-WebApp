@@ -1,6 +1,5 @@
 import styled, { css } from 'styled-components';
 import { BurgerIcon } from '@/components/common/Burger/BurgerIcon';
-import { CreateEventButton } from '@/components/header/components/CreateEventButton/CreateEventButton';
 import { LAYOUT, media } from '@/styles/themes/constants';
 import { BaseCollapse } from '../common/BaseCollapse/BaseCollapse';
 import { BaseCol } from '../common/BaseCol/BaseCol';
@@ -88,12 +87,4 @@ export const LinkButton = styled(BaseButton)`
   }
   color: white;
   font-family: 'Montserrat';
-`;
-
-export const CEButton = styled(CreateEventButton)`
-  display: none;
-
-  @media only screen and ${media.lg} {
-    display: flex;
-  }
 `;

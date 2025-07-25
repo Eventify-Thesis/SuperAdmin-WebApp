@@ -31,7 +31,7 @@
     "antDesignUIFaq": "Câu hỏi thường gặp về giao diện AntDesign",
     "articles": "Bài viết",
     "basic": "Tự động hoàn thành cơ bản",
-    "categories": "Tự động hoàn thành theo danh mục",
+    "categories": "Tự động hoàn thành theo thể loại",
     "customOptions": "Tự động hoàn thành với tùy chọn tùy chỉnh",
     "inputHere": "nhập tại đây",
     "libraries": "Thư viện",
@@ -127,7 +127,7 @@
     "manage": "Quản lý",
     "danger_zone": "Khu vực nguy hiểm",
     "event-dashboard": "Bảng điều khiển sự kiện",
-    "export": "Danh mục",
+    "export": "Thể loại",
     "legal": "Tài liệu pháp lý",
     "issueReports": "Báo cáo sự cố",
     "address": "Địa chỉ",
@@ -908,6 +908,33 @@
     "recentlyAddedNFTs": "Recently Added NFTs",
     "trendingCreators": "Trending Creators"
   },
+  "admin": {
+    "category": {
+      "title": "Quản lý thể loại",
+      "add_category": "Thêm thể loại mới",
+      "current_categories": "Danh sách thể loại hiện có",
+      "code": "Mã thể loại",
+      "code_required": "Vui lòng nhập mã thể loại",
+      "name_en": "Tên tiếng Anh",
+      "name_en_required": "Vui lòng nhập tên tiếng Anh",
+      "name_vi": "Tên tiếng Việt",
+      "name_vi_required": "Vui lòng nhập tên tiếng Việt",
+      "image": "Hình ảnh",
+      "image_required": "Vui lòng tải lên hình ảnh",
+      "upload_image": "Tải ảnh lên",
+      "submit": "Thêm thể loại",
+      "delete_success": "Xóa thể loại thành công",
+      "delete_error": "Có lỗi xảy ra khi xóa thể loại",
+      "add_success": "Thêm thể loại thành công",
+      "add_error": "Có lỗi xảy ra khi thêm thể loại"
+    }
+  },
+  "category": {
+    "delete_modal_title": "Bạn có chắc chắn muốn xóa?",
+    "delete_modal_subtitle": "Thao tác này không thể hoàn tác. Bạn sẽ không thể khôi phục dữ liệu này!",
+    "confirm_cancel": "Hủy",
+    "confirm_ok": "Xóa"
+  },
   "questions": {
     "options": "Tùy chọn",
     "please_add_option": "Vui lòng thêm ít nhất một tùy chọn",
@@ -1014,12 +1041,12 @@
       "street_required": "Vui lòng nhập địa chỉ đường phố"
     },
     "event_category": {
-      "title": "Danh mục sự kiện",
-      "label": "Danh mục",
-      "required": "Vui lòng chọn danh mục",
-      "placeholder": "Chọn danh mục",
-      "info": "Thông tin danh mục sự kiện",
-      "info_required": "Vui lòng nhập thông tin danh mục sự kiện"
+      "title": "Thể loại sự kiện",
+      "label": "Thể loại",
+      "required": "Vui lòng chọn thể loại",
+      "placeholder": "Chọn thể loại",
+      "info": "Thông tin thể loại sự kiện",
+      "info_required": "Vui lòng nhập thông tin thể loại sự kiện"
     },
     "event_description": {
       "title": "Mô tả sự kiện",

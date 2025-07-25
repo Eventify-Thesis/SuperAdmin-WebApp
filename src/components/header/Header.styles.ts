@@ -1,6 +1,5 @@
 import styled, { css } from 'styled-components';
 import { BurgerIcon } from '@/components/common/Burger/BurgerIcon';
-import { CreateEventButton } from '@/components/header/components/CreateEventButton/CreateEventButton';
 import { FONT_SIZE, LAYOUT, media } from '@/styles/themes/constants';
 import { BaseCollapse } from '../common/BaseCollapse/BaseCollapse';
 import { BaseCol } from '../common/BaseCol/BaseCol';
@@ -96,12 +95,4 @@ export const NavIcon = styled(Icon)`
   width: 24px;
   height: 24px;
   margin-bottom: 5px;
-`;
-
-export const CEButton = styled(CreateEventButton)`
-  display: none;
-
-  @media only screen and ${media.lg} {
-    display: flex;
-  }
 `;

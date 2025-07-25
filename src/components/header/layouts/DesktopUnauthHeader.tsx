@@ -33,9 +33,6 @@ export const DesktopUnauthHeader: React.FC<DesktopUnauthHeaderProps> = ({}) => {
       }}
     >
       {leftSide}
-      <BaseCol>
-        <S.CEButton />
-      </BaseCol>
 
       <S.ProfileColumn xl={8} xxl={7}>
         <BaseRow align="middle" justify="end" gutter={[5, 5]}>
