@@ -502,15 +502,15 @@
     }
   },
   "header": {
-    "changeLanguage": "Change language",
-    "changeTheme": "Change theme",
-    "darkTheme": "Dark",
-    "lightTheme": "Light",
-    "logout": "Logout",
+    "changeLanguage": "Đổi ngôn ngữ",
+    "changeTheme": "Đổi giao diện",
+    "darkTheme": "Giao diện tối",
+    "lightTheme": "Giao diện sáng",
+    "logout": "Đăng xuất",
     "nightMode": {
-      "from": "From",
-      "title": "Nightmode",
-      "to": "To",
+      "from": "Từ",
+      "title": "Chế độ đêm",
+      "to": "Đến",
       "h": "h"
     },
     "notifications": {
@@ -1179,6 +1179,64 @@
     "seatmap": "Sơ đồ chỗ ngồi",
     "setting": "Cài đặt",
     "voucher": "Quản lý mã giảm giá"
+  },
+  "issueReports": {
+    "title": "Quản lý Báo cáo Sự cố",
+    "statistics": {
+      "openIssues": "Sự cố đang mở",
+      "inProgress": "Đang xử lý",
+      "resolved": "Đã giải quyết",
+      "closed": "Đã đóng"
+    },
+    "table": {
+      "id": "ID",
+      "user": "Người dùng",
+      "title": "Tiêu đề",
+      "category": "Danh mục",
+      "priority": "Ưu tiên",
+      "status": "Trạng thái",
+      "images": "Hình ảnh",
+      "created": "Ngày tạo",
+      "actions": "Thao tác"
+    },
+    "search": {
+      "placeholder": "Tìm kiếm sự cố...",
+      "filters": {
+        "status": "Trạng thái",
+        "category": "Danh mục",
+        "priority": "Độ ưu tiên",
+        "clearFilters": "Xóa bộ lọc"
+      }
+    },
+    "modals": {
+      "deleteConfirm": {
+        "title": "Xác nhận xóa",
+        "content": "Bạn có chắc chắn muốn xóa báo cáo sự cố này?",
+        "okText": "Có",
+        "cancelText": "Không"
+      },
+      "details": {
+        "user": "Người dùng",
+        "title": "Tiêu đề",
+        "category": "Danh mục",
+        "priority": "Độ ưu tiên",
+        "status": "Trạng thái",
+        "description": "Mô tả",
+        "evidenceImages": "Hình ảnh minh chứng",
+        "created": "Ngày tạo",
+        "updated": "Cập nhật lần cuối"
+      }
+    },
+    "messages": {
+      "statusUpdated": "Cập nhật trạng thái thành công",
+      "statusUpdateFailed": "Cập nhật trạng thái thất bại",
+      "deleted": "Đã xóa báo cáo sự cố thành công",
+      "deleteFailed": "Xóa báo cáo sự cố thất bại",
+      "loadFailed": "Tải danh sách báo cáo sự cố thất bại"
+    },
+    "pagination": {
+      "total": "{{from}}-{{to}} trong tổng số {{total}} báo cáo sự cố"
+    }
   },
   "voucher": {
     "name": "Tên",

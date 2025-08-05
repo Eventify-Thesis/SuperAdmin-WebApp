@@ -18,7 +18,6 @@ export const InputsWrapper = styled.div`
 
   @media (max-width: 1280px) {
     max-width: 100%;
-    margin-bottom: 1rem;
   }
 
   .ant-input-group-wrapper {

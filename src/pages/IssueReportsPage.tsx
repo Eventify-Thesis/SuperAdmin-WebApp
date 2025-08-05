@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import {
   Button,
   Table,
@@ -37,6 +38,7 @@ const { Search } = Input;
 const { Option } = Select;
 
 export const IssueReportsPage: React.FC = () => {
+  const { t } = useTranslation();
   const [issueReports, setIssueReports] = useState<IssueReport[]>([]);
   const [loading, setLoading] = useState(true);
   const [total, setTotal] = useState(0);
@@ -61,7 +63,7 @@ export const IssueReportsPage: React.FC = () => {
       setTotal(response.data.total);
     } catch (error) {
       console.error('Error loading issue reports:', error);
-      message.error('Failed to load issue reports');
+      message.error(t('issueReports.messages.loadFailed'));
     } finally {
       setLoading(false);
     }
@@ -77,22 +79,22 @@ export const IssueReportsPage: React.FC = () => {
   ) => {
     try {
       await issueReportsApi.updateIssueReport(issueId, { status: newStatus });
-      message.success('Status updated successfully');
+      message.success(t('issueReports.messages.statusUpdated'));
       loadIssueReports();
     } catch (error) {
       console.error('Error updating status:', error);
-      message.error('Failed to update status');
+      message.error(t('issueReports.messages.statusUpdateFailed'));
     }
   };
 
   const handleDelete = async (issueId: number) => {
     try {
       await issueReportsApi.deleteIssueReport(issueId);
-      message.success('Issue report deleted successfully');
+      message.success(t('issueReports.messages.deleted'));
       loadIssueReports();
     } catch (error) {
       console.error('Error deleting issue report:', error);
-      message.error('Failed to delete issue report');
+      message.error(t('issueReports.messages.deleteFailed'));
     }
   };
 
@@ -147,14 +149,14 @@ export const IssueReportsPage: React.FC = () => {
 
   const columns: ColumnsType<IssueReport> = [
     {
-      title: 'ID',
+      title: t('issueReports.table.id'),
       dataIndex: 'id',
       key: 'id',
       width: 80,
       sorter: (a, b) => a.id - b.id,
     },
     {
-      title: 'User',
+      title: t('issueReports.table.user'),
       key: 'user',
       width: 150,
       render: (_, record) => (
@@ -172,7 +174,7 @@ export const IssueReportsPage: React.FC = () => {
       ),
     },
     {
-      title: 'Title',
+      title: t('issueReports.table.title'),
       dataIndex: 'title',
       key: 'title',
       width: 200,
@@ -180,7 +182,7 @@ export const IssueReportsPage: React.FC = () => {
       render: (text) => <Tooltip title={text}>{text}</Tooltip>,
     },
     {
-      title: 'Category',
+      title: t('issueReports.table.category'),
       dataIndex: 'category',
       key: 'category',
       width: 120,
@@ -195,7 +197,7 @@ export const IssueReportsPage: React.FC = () => {
       ),
     },
     {
-      title: 'Priority',
+      title: t('issueReports.table.priority'),
       dataIndex: 'priority',
       key: 'priority',
       width: 100,
@@ -208,7 +210,7 @@ export const IssueReportsPage: React.FC = () => {
       ),
     },
     {
-      title: 'Status',
+      title: t('issueReports.table.status'),
       dataIndex: 'status',
       key: 'status',
       width: 130,
@@ -232,7 +234,7 @@ export const IssueReportsPage: React.FC = () => {
       ),
     },
     {
-      title: 'Images',
+      title: t('issueReports.table.images'),
       key: 'images',
       width: 80,
       render: (_, record) => (
@@ -251,7 +253,7 @@ export const IssueReportsPage: React.FC = () => {
       ),
     },
     {
-      title: 'Created',
+      title: t('issueReports.table.created'),
       dataIndex: 'createdAt',
       key: 'createdAt',
       width: 120,
@@ -260,7 +262,7 @@ export const IssueReportsPage: React.FC = () => {
       render: (date) => new Date(date).toLocaleDateString(),
     },
     {
-      title: 'Actions',
+      title: t('issueReports.table.actions'),
       key: 'actions',
       width: 120,
       render: (_, record) => (
@@ -275,10 +277,10 @@ export const IssueReportsPage: React.FC = () => {
             }}
           />
           <Popconfirm
-            title="Are you sure you want to delete this issue report?"
+            title={t('issueReports.modals.deleteConfirm.content')}
             onConfirm={() => handleDelete(record.id)}
-            okText="Yes"
-            cancelText="No"
+            okText={t('issueReports.modals.deleteConfirm.okText')}
+            cancelText={t('issueReports.modals.deleteConfirm.cancelText')}
           >
             <Button type="text" icon={<DeleteOutlined />} size="small" danger />
           </Popconfirm>
@@ -324,14 +326,14 @@ export const IssueReportsPage: React.FC = () => {
 
   return (
     <div style={{ padding: '24px' }}>
-      <PageTitle>Issue Reports Management</PageTitle>
+      <PageTitle>{t('issueReports.title')}</PageTitle>
 
       {/* Statistics Cards */}
       <Row gutter={16} style={{ marginBottom: '24px' }}>
         <Col span={6}>
           <Card>
             <Statistic
-              title="Open Issues"
+              title={t('issueReports.statistics.openIssues')}
               value={statusCounts[IssueStatus.OPEN]}
               valueStyle={{ color: '#cf1322' }}
               prefix="🔴"
@@ -341,7 +343,7 @@ export const IssueReportsPage: React.FC = () => {
         <Col span={6}>
           <Card>
             <Statistic
-              title="In Progress"
+              title={t('issueReports.statistics.inProgress')}
               value={statusCounts[IssueStatus.IN_PROGRESS]}
               valueStyle={{ color: '#fa8c16' }}
               prefix="🟡"
@@ -351,7 +353,7 @@ export const IssueReportsPage: React.FC = () => {
         <Col span={6}>
           <Card>
             <Statistic
-              title="Resolved"
+              title={t('issueReports.statistics.resolved')}
               value={statusCounts[IssueStatus.RESOLVED]}
               valueStyle={{ color: '#52c41a' }}
               prefix="🟢"
@@ -361,7 +363,7 @@ export const IssueReportsPage: React.FC = () => {
         <Col span={6}>
           <Card>
             <Statistic
-              title="Closed"
+              title={t('issueReports.statistics.closed')}
               value={statusCounts[IssueStatus.CLOSED]}
               valueStyle={{ color: '#8c8c8c' }}
               prefix="⚫"
@@ -375,7 +377,7 @@ export const IssueReportsPage: React.FC = () => {
         <Row gutter={16}>
           <Col span={8}>
             <Search
-              placeholder="Search issues..."
+              placeholder={t('issueReports.search.placeholder')}
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               style={{ width: '100%' }}
@@ -383,7 +385,7 @@ export const IssueReportsPage: React.FC = () => {
           </Col>
           <Col span={4}>
             <Select
-              placeholder="Status"
+              placeholder={t('issueReports.search.filters.status')}
               value={statusFilter}
               onChange={setStatusFilter}
               style={{ width: '100%' }}
@@ -398,7 +400,7 @@ export const IssueReportsPage: React.FC = () => {
           </Col>
           <Col span={4}>
             <Select
-              placeholder="Category"
+              placeholder={t('issueReports.search.filters.category')}
               value={categoryFilter}
               onChange={setCategoryFilter}
               style={{ width: '100%' }}
@@ -413,7 +415,7 @@ export const IssueReportsPage: React.FC = () => {
           </Col>
           <Col span={4}>
             <Select
-              placeholder="Priority"
+              placeholder={t('issueReports.search.filters.priority')}
               value={priorityFilter}
               onChange={setPriorityFilter}
               style={{ width: '100%' }}
@@ -436,7 +438,7 @@ export const IssueReportsPage: React.FC = () => {
                 setSearchTerm('');
               }}
             >
-              Clear Filters
+              {t('issueReports.search.filters.clearFilters')}
             </Button>
           </Col>
         </Row>
@@ -459,8 +461,12 @@ export const IssueReportsPage: React.FC = () => {
             },
             showSizeChanger: true,
             showQuickJumper: true,
-            showTotal: (total, range) =>
-              `${range[0]}-${range[1]} of ${total} issue reports`,
+            showTotal: (total, [from, to]) =>
+              t('issueReports.pagination.total', {
+                from,
+                to,
+                total,
+              }),
           }}
           scroll={{ x: 1200 }}
         />
@@ -468,7 +474,7 @@ export const IssueReportsPage: React.FC = () => {
 
       {/* Detail Modal */}
       <Modal
-        title={`Issue Report #${selectedIssue?.id}`}
+        title={`${t('issueReports.title')} #${selectedIssue?.id}`}
         open={detailModalVisible}
         onCancel={() => setDetailModalVisible(false)}
         footer={null}
@@ -477,31 +483,31 @@ export const IssueReportsPage: React.FC = () => {
         {selectedIssue && (
           <div>
             <div style={{ marginBottom: '16px' }}>
-              <strong>User:</strong> {selectedIssue.userFirstName}{' '}
+              <strong>{t('issueReports.modals.details.user')}:</strong> {selectedIssue.userFirstName}{' '}
               {selectedIssue.userLastName} ({selectedIssue.userId})
             </div>
             <div style={{ marginBottom: '16px' }}>
-              <strong>Title:</strong> {selectedIssue.title}
+              <strong>{t('issueReports.modals.details.title')}:</strong> {selectedIssue.title}
             </div>
             <div style={{ marginBottom: '16px' }}>
-              <strong>Category:</strong>{' '}
+              <strong>{t('issueReports.modals.details.category')}:</strong>{' '}
               {getCategoryIcon(selectedIssue.category)}{' '}
               {selectedIssue.category.replace('_', ' ').toUpperCase()}
             </div>
             <div style={{ marginBottom: '16px' }}>
-              <strong>Priority:</strong>{' '}
+              <strong>{t('issueReports.modals.details.priority')}:</strong>{' '}
               <Tag color={getPriorityColor(selectedIssue.priority)}>
                 {selectedIssue.priority.toUpperCase()}
               </Tag>
             </div>
             <div style={{ marginBottom: '16px' }}>
-              <strong>Status:</strong>{' '}
+              <strong>{t('issueReports.modals.details.status')}:</strong>{' '}
               <Tag color={getStatusColor(selectedIssue.status)}>
                 {selectedIssue.status.replace('_', ' ').toUpperCase()}
               </Tag>
             </div>
             <div style={{ marginBottom: '16px' }}>
-              <strong>Description:</strong>
+              <strong>{t('issueReports.modals.details.description')}:</strong>
               <div
                 style={{
                   marginTop: '8px',
@@ -519,7 +525,7 @@ export const IssueReportsPage: React.FC = () => {
             </div>
             {selectedIssue.imageUrls && selectedIssue.imageUrls.length > 0 && (
               <div style={{ marginBottom: '16px' }}>
-                <strong>Evidence Images:</strong>
+                <strong>{t('issueReports.modals.details.evidenceImages')}:</strong>
                 <div style={{ marginTop: '8px' }}>
                   <Image.PreviewGroup>
                     {selectedIssue.imageUrls.map((url, index) => (
@@ -540,11 +546,11 @@ export const IssueReportsPage: React.FC = () => {
               </div>
             )}
             <div style={{ marginBottom: '16px' }}>
-              <strong>Created:</strong>{' '}
+              <strong>{t('issueReports.modals.details.created')}:</strong>{' '}
               {new Date(selectedIssue.createdAt).toLocaleString()}
             </div>
             <div style={{ marginBottom: '16px' }}>
-              <strong>Updated:</strong>{' '}
+              <strong>{t('issueReports.modals.details.updated')}:</strong>{' '}
               {new Date(selectedIssue.updatedAt).toLocaleString()}
             </div>
           </div>

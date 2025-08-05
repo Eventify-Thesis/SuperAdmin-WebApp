@@ -590,6 +590,64 @@
     "setting": "Settings",
     "voucher": "Voucher Management"
   },
+  "issueReports": {
+    "title": "Issue Reports Management",
+    "statistics": {
+      "openIssues": "Open Issues",
+      "inProgress": "In Progress",
+      "resolved": "Resolved",
+      "closed": "Closed"
+    },
+    "table": {
+      "id": "ID",
+      "user": "User",
+      "title": "Title",
+      "category": "Category",
+      "priority": "Priority",
+      "status": "Status",
+      "images": "Images",
+      "created": "Created",
+      "actions": "Actions"
+    },
+    "search": {
+      "placeholder": "Search issues...",
+      "filters": {
+        "status": "Status",
+        "category": "Category",
+        "priority": "Priority",
+        "clearFilters": "Clear Filters"
+      }
+    },
+    "modals": {
+      "deleteConfirm": {
+        "title": "Delete Confirmation",
+        "content": "Are you sure you want to delete this issue report?",
+        "okText": "Yes",
+        "cancelText": "No"
+      },
+      "details": {
+        "user": "User",
+        "title": "Title",
+        "category": "Category",
+        "priority": "Priority",
+        "status": "Status",
+        "description": "Description",
+        "evidenceImages": "Evidence Images",
+        "created": "Created",
+        "updated": "Updated"
+      }
+    },
+    "messages": {
+      "statusUpdated": "Status updated successfully",
+      "statusUpdateFailed": "Failed to update status",
+      "deleted": "Issue report deleted successfully",
+      "deleteFailed": "Failed to delete issue report",
+      "loadFailed": "Failed to load issue reports"
+    },
+    "pagination": {
+      "total": "{{from}}-{{to}} of {{total}} issue reports"
+    }
+  },
   "voucher": {
     "name": "Name",
     "name_placeholder": "Enter voucher name",
